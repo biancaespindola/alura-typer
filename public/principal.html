@@ -3,30 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>Typing Defense</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
     <!-- Seja bem vindo ao curso de jQuery :) -->
-    <header>
-      <h1>Typing Defense</h1>
-      <p class="frase">
-        Nosso destino vive dentro de nós, você só tem que ser corajoso o
-        suficiente para vê-lo. - Valente.
-      </p>
-    </header>
+    <div class="container">
+      <header class="center">
+        <h1>Typing Defense</h1>
+        <p class="frase">
+          Nosso destino vive dentro de nós, você só tem que ser corajoso o
+          suficiente para vê-lo. - Valente.
+        </p>
+      </header>
 
-    <ul class="informacoes">
-      <li><span id="tamanho-frase">0</span> palavras</li>
-      <li><span id="tempo-digitacao">4</span> Segundos</li>
-    </ul>
+      <ul class="informacoes center">
+        <li><span id="tamanho-frase">0</span> palavras</li>
+        <li><span id="tempo-digitacao">8</span> Segundos</li>
+      </ul>
 
-    <textarea class="campo-digitacao" cols="30" rows="10"></textarea>
+      <textarea class="campo-digitacao center" cols="30" rows="10"></textarea>
 
-    <button id="botao-reiniciar">Reiniciar Jogo</button>
+      <button id="botao-reiniciar">Reiniciar Jogo</button>
 
-    <ul>
-      <li><span id="contador-caracteres">0</span> caracteres</li>
-      <li><span id="contador-palavras">0</span> palavras</li>
-    </ul>
+      <ul class="center">
+        <li><span id="contador-caracteres">0</span> caracteres</li>
+        <li><span id="contador-palavras">0</span> palavras</li>
+      </ul>
+    </div>
+
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
