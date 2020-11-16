@@ -1,16 +1,28 @@
 .frase {
   font-size: 25px;
+  text-align: justify;
 }
 
 .icones {
   vertical-align: middle;
 }
 
+.campo-digitacao-desativado {
+  background-color: lightgrey;
+}
+
 .campo-digitacao {
   font-size: 20px;
   height: 150px;  
+  border: 3px solid #000000;
 }
 
-.campo-digitacao-desativado {
-  background-color: lightgrey;
+.borda-verde {
+  border: 6px solid #04860b;
+  /* background-color: #04860b; */
+}
+
+.borda-vermelha {
+  border : 6px solid #ac1308;
+  /* background-color: #ac1308; */
 }
