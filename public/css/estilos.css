@@ -2,6 +2,15 @@
   font-size: 25px;
 }
 
-.campo {
+.icones {
+  vertical-align: middle;
+}
+
+.campo-digitacao {
   font-size: 20px;
+  height: 150px;  
+}
+
+.campo-digitacao-desativado {
+  background-color: lightgrey;
 }
