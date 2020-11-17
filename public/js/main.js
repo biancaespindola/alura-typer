@@ -93,10 +93,12 @@ function inserePlacar (){
   // console.log(tabela);
   var nomeUsuario = "Bibi";
   var numPalavras = $("#contador-palavras").text();
+  var botaoRemover = '<a href="#"><i class="small material-icons">delete</i></a>';
 
   var linha = "<tr>"+
-                  "<td>" + nomeUsuario + "</td>" +
-                  "<td>" + numPalavras + "</td>" +
+                  "<td>" + nomeUsuario  + "</td>" +
+                  "<td>" + numPalavras  + "</td>" +
+                  "<td>" + botaoRemover + "</td>" +
               "</tr>";
   corpoTabela.prepend(linha);
 };
