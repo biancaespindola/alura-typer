@@ -39,30 +39,29 @@ function inicializaCronometro() {
       tempoRestante--;
       // console.log(tempoRestante);
       $("#tempo-digitacao").text(tempoRestante);
-      if (tempoRestante < 1) {        
-        clearInterval(cronometroID); 
-        finalizaJogo();       
+      if (tempoRestante < 1) {
+        clearInterval(cronometroID);
+        finalizaJogo();
       }
     }, 1000);
   });
 }
 
-function finalizaJogo(){
+function finalizaJogo() {
   campo.attr("disabled", true);
   campo.toggleClass("campo-digitacao-desativado");
   inserePlacar();
-};
+}
 
-
-function inicializaMarcadores(){
+function inicializaMarcadores() {
   var frase = $(".frase").text();
-  campo.on("input", function() {
+  campo.on("input", function () {
     var digitado = campo.val();
-    var comparavel = frase.substr(0,digitado.length);
+    var comparavel = frase.substr(0, digitado.length);
     // console.log(comparavel);
     // console.log("Digitado: " + digitado);
     // console.log("Comparavel: " + comparavel);
-    if(digitado == comparavel){
+    if (digitado == comparavel) {
       // console.log("esta certo");
       campo.addClass("borda-verde");
       campo.removeClass("borda-vermelha");
@@ -71,14 +70,7 @@ function inicializaMarcadores(){
       campo.removeClass("borda-verde");
     }
   });
-};
-
-
-function removeLinha(){
-    event.preventDefault();
-    $(this).parent().parent().remove();
-};
-
+}
 
 function reiniciaJogo() {
   campo.attr("disabled", false);
@@ -91,39 +83,3 @@ function reiniciaJogo() {
   campo.removeClass("borda-verde");
   inicializaCronometro();
 }
-
-function inserePlacar (){
-  var corpoTabela = $(".placar").find("tbody");
-  // console.log(tabela);
-  var nomeUsuario = "Bibi";
-  var numPalavras = $("#contador-palavras").text();
-  
-
-  var linha = novaLinha(nomeUsuario, numPalavras);
-  linha.find(".botao-remover").click(removeLinha);
-
-  corpoTabela.prepend(linha);
-};
-
-function novaLinha(nomeUsuario, numPalavras){
-  var linha = $("<tr>");
-
-  var colunaUsuario = $("<td>").text(nomeUsuario);
-  var colunaPalavras = $("<td>").text(numPalavras);
-  var colunaRemover = $("<td>");
-
-  var link = $("<a>").addClass("botao-remover").attr("href","#");
-  var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
-
-  link.append(icone);
-
-  colunaRemover.append(link);
-
-  linha.append(colunaUsuario);
-  linha.append(colunaPalavras);
-  linha.append(colunaRemover);
-
-  console.log(linha);
-
-  return linha;
-};

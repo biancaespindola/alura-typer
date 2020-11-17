@@ -13,7 +13,7 @@
 
 .campo-digitacao {
   font-size: 20px;
-  height: 150px;  
+  height: 150px;
   border: 3px solid #000000;
 }
 
@@ -23,6 +23,6 @@
 }
 
 .borda-vermelha {
-  border : 6px solid #ac1308;
+  border: 6px solid #ac1308;
   /* background-color: #ac1308; */
 }
