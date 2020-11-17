@@ -73,10 +73,12 @@ function inicializaMarcadores(){
   });
 };
 
-$(".botao-remover").click(function(event){
-  event.preventDefault();
-  $(this).parent().parent().remove();
-});
+
+function removeLinha(){
+    event.preventDefault();
+    $(this).parent().parent().remove();
+};
+
 
 function reiniciaJogo() {
   campo.attr("disabled", false);
@@ -95,12 +97,33 @@ function inserePlacar (){
   // console.log(tabela);
   var nomeUsuario = "Bibi";
   var numPalavras = $("#contador-palavras").text();
-  var botaoRemover = '<a href="#"><i class="small material-icons">delete</i></a>';
+  
 
-  var linha = "<tr>"+
-                  "<td>" + nomeUsuario  + "</td>" +
-                  "<td>" + numPalavras  + "</td>" +
-                  "<td>" + botaoRemover + "</td>" +
-              "</tr>";
+  var linha = novaLinha(nomeUsuario, numPalavras);
+  linha.find(".botao-remover").click(removeLinha);
+
   corpoTabela.prepend(linha);
+};
+
+function novaLinha(nomeUsuario, numPalavras){
+  var linha = $("<tr>");
+
+  var colunaUsuario = $("<td>").text(nomeUsuario);
+  var colunaPalavras = $("<td>").text(numPalavras);
+  var colunaRemover = $("<td>");
+
+  var link = $("<a>").addClass("botao-remover").attr("href","#");
+  var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
+
+  link.append(icone);
+
+  colunaRemover.append(link);
+
+  linha.append(colunaUsuario);
+  linha.append(colunaPalavras);
+  linha.append(colunaRemover);
+
+  console.log(linha);
+
+  return linha;
 };
