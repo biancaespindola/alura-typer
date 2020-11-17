@@ -72,9 +72,11 @@ function inicializaMarcadores(){
     }
   });
 };
-// $("#botao-reiniciar").on("click", function(){
-//   console.log("Botao clicado");
-// });
+
+$(".botao-remover").click(function(event){
+  event.preventDefault();
+  $(this).parent().parent().remove();
+});
 
 function reiniciaJogo() {
   campo.attr("disabled", false);
