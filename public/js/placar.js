@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostraPlacar);
+
 function inserePlacar() {
   var corpoTabela = $(".placar").find("tbody");
   // console.log(tabela);
@@ -39,4 +41,9 @@ function novaLinha(nomeUsuario, numPalavras) {
   console.log(linha);
 
   return linha;
+}
+
+
+function mostraPlacar(){
+  $(".placar").slideToggle(600);
 }

@@ -26,3 +26,11 @@
   border: 6px solid #ac1308;
   /* background-color: #ac1308; */
 }
+
+.placar {
+  display: none;
+}
+
+body {
+  overflow: scroll;
+}
