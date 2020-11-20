@@ -4,7 +4,11 @@ function fraseAleatoria()  {
   // console.log("botão foi clicado");
   $.get("http://localhost:3000/frases", trocaFraseAleatoria)
   .fail(function(){
-    $("#erro").show();
+    $("#erro").toggle();
+    setTimeout(function(){
+      $("#erro").toggle();
+    },2000);
+   
   });
 }
 
