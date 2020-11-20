@@ -2,6 +2,8 @@ $("#botao-frase").click(fraseAleatoria);
 
 function fraseAleatoria()  {
   // console.log("botão foi clicado");
+  $("#spinner").toggle();
+
   $.get("http://localhost:3000/frases", trocaFraseAleatoria)
   .fail(function(){
     $("#erro").toggle();
@@ -9,6 +11,9 @@ function fraseAleatoria()  {
       $("#erro").toggle();
     },2000);
    
+  })
+  .always(function(){
+    $("#spinner").toggle();
   });
 }
 
