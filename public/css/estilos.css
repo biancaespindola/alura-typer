@@ -34,3 +34,8 @@
 body {
   overflow: scroll;
 }
+
+#erro{
+  color: #ac1308;
+  display: none;
+}

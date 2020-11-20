@@ -6,7 +6,8 @@
     "nedb": "^1.8.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev:start": "nodemon principal.js"
   },
   "name": "servidor",
   "version": "1.0.0",
