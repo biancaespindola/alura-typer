@@ -1,5 +1,18 @@
 {
   "dependencies": {
-    "jquery": "^3.5.1"
-  }
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "nedb": "^1.8.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "servidor",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
