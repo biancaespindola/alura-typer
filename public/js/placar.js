@@ -1,4 +1,5 @@
 $("#botao-placar").click(mostraPlacar);
+$('#botao-sync').click(sincronizaPlacar);
 
 function inserePlacar() {
   var corpoTabela = $(".placar").find("tbody");
@@ -62,4 +63,8 @@ function novaLinha(nomeUsuario, numPalavras) {
 
 function mostraPlacar(){
   $(".placar").stop().slideToggle(600);
+}
+
+function sincronizaPlacar() {
+  console.log("botao detectado");
 }
