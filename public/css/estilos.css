@@ -35,7 +35,7 @@ body {
   overflow: scroll;
 }
 
-#erro{
+#erro {
   color: #ac1308;
   display: none;
 }
@@ -52,7 +52,7 @@ body {
   float: right;
 }
 
-.select-usuarios{
+.select-usuarios {
   display: inline-block;
 }
 
@@ -60,7 +60,6 @@ body {
   width: 150px;
   vertical-align: middle;
 }
-
 
 #usuarios {
   display: block;

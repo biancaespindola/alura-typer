@@ -5,7 +5,8 @@
     <title>Typing Defense</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css" />
     <link rel="stylesheet" href="css/libs/google-fonts.css" />
-    <link rel="stylesheet" href="css/selectize.default.css" />
+    <link rel="stylesheet" href="css/libs/selectize.default.css" />
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
@@ -17,7 +18,7 @@
       </header>
 
       <div class="center">
-        <img src="img/spinner.gif" alt="carregando página" id="spinner">
+        <img src="img/spinner.gif" alt="carregando página" id="spinner" />
         <p id="erro">Ocorreu um erro, por favor tente novamente!</p>
       </div>
 
@@ -58,30 +59,30 @@
         </a>
         <!-- botão busca a frase-->
         <a
-          class="btn-floating btn-large waves-effect waves-light  deep-purple darken-1"
+          class="btn-floating btn-large waves-effect waves-light deep-purple darken-1"
           id="botao-frase-id"
         >
           <i class="material-icons">search</i>
         </a>
-        <input type="number" id="frase-id" min="0">
+        <input type="number" id="frase-id" min="0" />
 
         <div class="select-usuarios">
           <select id="usuarios">
-             <option value="Bianca">Bianca</option>
-             <option value="Ingrid">Ingrid</option>
-             <option value="Sofia">Sofia</option>
-             <option value="Silvana">Silvana</option>
+            <option value="Bianca">Bianca</option>
+            <option value="Ingrid">Ingrid</option>
+            <option value="Sofia">Sofia</option>
+            <option value="Silvana">Silvana</option>
           </select>
-         </div>
+        </div>
 
-         <!-- botão bsincronizar dados com servidor-->
-         <a
-         class="btn-floating btn-large waves-effect waves-light  pink darken-3"
-         id="botao-sync"
-       >
-         <i class="material-icons">sync</i>
-       </a>
-
+        <!-- botão bsincronizar dados com servidor-->
+        <a
+          class="btn-floating btn-large waves-effect waves-light tooltip pink darken-3"
+          id="botao-sync"
+          title="Sincronizado com sucesso!"
+        >
+          <i class="material-icons">sync</i>
+        </a>
       </div>
 
       <ul class="center">
@@ -118,6 +119,7 @@
     <script src="js/placar.js"></script>
     <script src="js/geradorFrases.js"></script>
     <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

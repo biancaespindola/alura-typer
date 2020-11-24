@@ -1,21 +1,20 @@
 $("#botao-frase").click(fraseAleatoria);
 $("#botao-frase-id").click(buscaFrase);
 
-function fraseAleatoria()  {
+function fraseAleatoria() {
   // console.log("botão foi clicado");
   $("#spinner").toggle();
 
   $.get("http://localhost:3000/frases", trocaFraseAleatoria)
-  .fail(function(){
-    $("#erro").toggle();
-    setTimeout(function(){
+    .fail(function () {
       $("#erro").toggle();
-    },2000);
-   
-  })
-  .always(function(){
-    $("#spinner").toggle();
-  });
+      setTimeout(function () {
+        $("#erro").toggle();
+      }, 2000);
+    })
+    .always(function () {
+      $("#spinner").toggle();
+    });
 }
 
 function trocaFraseAleatoria(data) {
@@ -27,30 +26,29 @@ function trocaFraseAleatoria(data) {
 
   atualizaTamanhoFrase();
   atualizaTempoInicial(data[numAleatorio].tempo);
-};
+}
 
-function buscaFrase(){  
+function buscaFrase() {
   $("#spinner").toggle();
   var fraseID = $("#frase-id").val();
   console.log("o ID da minha frase é " + fraseID);
-  var dados = {id: fraseID};
+  var dados = { id: fraseID };
 
-  $.get("http://localhost:3000/frases",dados,trocaFrase)
-  .fail(function(){
-    $("#erro").toggle();
-    setTimeout(function(){
+  $.get("http://localhost:3000/frases", dados, trocaFrase)
+    .fail(function () {
       $("#erro").toggle();
-    },2000);
-   
-  })
-  .always(function(){
-    $("#spinner").toggle();
-  });
-};
+      setTimeout(function () {
+        $("#erro").toggle();
+      }, 2000);
+    })
+    .always(function () {
+      $("#spinner").toggle();
+    });
+}
 
-function trocaFrase(data){
+function trocaFrase(data) {
   var frase = $(".frase");
   frase.text(data.texto);
   atualizaTamanhoFrase();
   atualizaTempoInicial(data.tempo);
-};
+}

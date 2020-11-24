@@ -8,18 +8,22 @@ $(function () {
   inicializaMarcadores();
   $("#botao-reiniciar").click(reiniciaJogo);
   atualizaPlacar();
-  //no main.js no final da função inicial do jQuery  
+  //no main.js no final da função inicial do jQuery
   $("#usuarios").selectize({
     create: true,
-    sortField: 'text'
+    sortField: "text",
+  });
+
+  $(".tooltip").tooltipster({
+    trigger: "custom",
   });
 });
 
-function atualizaTempoInicial(tempo){
+function atualizaTempoInicial(tempo) {
   tempoInicial = tempo;
 
   $("#tempo-digitacao").text(tempo);
-};
+}
 
 //função que atualiza o tempo que a frase leva para ser digitadae quantas letras tem
 function atualizaTamanhoFrase() {
@@ -66,7 +70,6 @@ function finalizaJogo() {
 }
 
 function inicializaMarcadores() {
-  
   campo.on("input", function () {
     var frase = $(".frase").text();
     var digitado = campo.val();
