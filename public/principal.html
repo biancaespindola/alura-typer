@@ -5,6 +5,7 @@
     <title>Typing Defense</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css" />
     <link rel="stylesheet" href="css/libs/google-fonts.css" />
+    <link rel="stylesheet" href="css/selectize.default.css" />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
@@ -64,6 +65,15 @@
         </a>
         <input type="number" id="frase-id" min="0">
 
+        <div class="select-usuarios">
+          <select id="usuarios">
+             <option value="Bianca">Bianca</option>
+             <option value="Ingrid">Ingrid</option>
+             <option value="Sofia">Sofia</option>
+             <option value="Silvana">Silvana</option>
+          </select>
+         </div>
+
          <!-- botão bsincronizar dados com servidor-->
          <a
          class="btn-floating btn-large waves-effect waves-light  pink darken-3"
@@ -107,6 +117,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/placar.js"></script>
     <script src="js/geradorFrases.js"></script>
+    <script src="js/selectize.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
